@@ -8,11 +8,13 @@ namespace Program
         private int attack;
         private int defense;
         private String type;
+        private String description;
 
         public String Name { get; set; }
         public String Type { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
+        public String Description { get; set; }
 
         public Item(String name, String type, int attack, int defense)
         {
