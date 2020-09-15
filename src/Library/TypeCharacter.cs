@@ -4,11 +4,7 @@ namespace Program
 {
     class TypeCharacter
     {
-        private int attack;
-        private int defense;
-        private int magia;
-        private int maxLife;
-        public int Attack { get; set; }
+         public int Attack { get; set; }
         public int Defense { get; set; }
         public int Magia { get; set; }
         public int MaxLife { get; set; }
