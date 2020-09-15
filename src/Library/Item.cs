@@ -8,6 +8,7 @@ namespace Program
         private int attack;
         private int defense;
         private String type;
+        private String description;
         private int force;
         private int resistence;
         private int magic;
@@ -16,6 +17,7 @@ namespace Program
         public String Type { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
+        public String Description { get; set; }
         public int Force { get; set; }
         public int Resistence { get; set;}
 
