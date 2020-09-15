@@ -43,6 +43,14 @@ namespace Program
             }
             return res;
         }
+        public void AddItem(Item item)
+        {
+            this.Inventory.Add(item);
+        }
+        public void RemoveItem(Item item)
+        {
+            this.Inventory.Remove(item);
+        }
 
     }
 }
