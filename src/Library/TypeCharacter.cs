@@ -2,43 +2,48 @@ using System;
 
 namespace Program
 {
-    class TypeCharacter
+    public class TypeCharacter
     {
-         public int Attack { get; set; }
+        public int Attack { get; set; }
         public int Defense { get; set; }
         public int Magia { get; set; }
         public int MaxLife { get; set; }
 
-        private TypeCharacter(int attack, int defense, int magia, int maxLife)
+        public TypeCharacter(String type)
         {
-            this.Attack = attack;
-            this.Defense = defense;
-            this.Magia = magia;
-            this.MaxLife = maxLife;
-        }
-
-        public static TypeCharacter StatSelector(String type)
-        {
-            TypeCharacter characterType = null;
+            type = type.ToLower();
             switch (type.ToLower())
             {
                 case "mago":
                     {
-                        characterType = new TypeCharacter(0, 5, 15, 100);
+                        this.Attack = 0;
+                        this.Defense = 5;
+                        this.Magia = 15;
+                        this.MaxLife = 100;
                         break;
                     }
                 case "enano":
                     {
-                        characterType = new TypeCharacter(10, 10, 0, 150);
+                        this.Attack = 10;
+                        this.Defense = 10;
+                        this.Magia = 0;
+                        this.MaxLife = 150;
                         break;
                     }
                 case "elfo":
                     {
-                        characterType = new TypeCharacter(5, 5, 5, 120);
+                        this.Attack = 5;
+                        this.Defense = 5;
+                        this.Magia = 5;
+                        this.MaxLife = 120;
                         break;
                     }
+                default:
+                    {
+                        break;
+                    }
+
             }
-            return characterType;
         }
     }
 }
