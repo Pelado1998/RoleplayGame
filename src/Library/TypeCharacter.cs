@@ -4,6 +4,7 @@ namespace Program
 {
     public class TypeCharacter
     {
+        public String Name { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
         public int Magia { get; set; }
@@ -11,12 +12,12 @@ namespace Program
 
         public TypeCharacter(String type)
         {
-            type = type.ToLower();
             switch (type.ToLower())
             {
                 case "mago":
                     {
-                        this.Attack = 0;
+                        this.Name = type;
+                        this.Attack = 1;
                         this.Defense = 5;
                         this.Magia = 15;
                         this.MaxLife = 100;
@@ -24,14 +25,16 @@ namespace Program
                     }
                 case "enano":
                     {
+                        this.Name = type;
                         this.Attack = 10;
                         this.Defense = 10;
-                        this.Magia = 0;
+                        this.Magia = 1;
                         this.MaxLife = 150;
                         break;
                     }
                 case "elfo":
                     {
+                        this.Name = type;
                         this.Attack = 5;
                         this.Defense = 5;
                         this.Magia = 5;
