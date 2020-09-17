@@ -8,7 +8,7 @@ namespace Program
     {
         public Item Head { get; set; }
         public Item Chest { get; set; }
-        public Item MainWeapon { get; set; }
+        public Item PrimaryWeapon { get; set; }
         public Item SecondaryWeapon { get; set; }
         public Item Legs { get; set; }
         public Item Feet { get; set; }
@@ -25,8 +25,8 @@ namespace Program
                     case ("chest"):
                         this.Chest = item;
                         break;
-                    case ("mainweapon"):
-                        this.MainWeapon = item;
+                    case ("primaryweapon"):
+                        this.PrimaryWeapon = item;
                         break;
                     case ("secondaryweapon"):
                         this.SecondaryWeapon = item;
@@ -41,33 +41,33 @@ namespace Program
             }
         }
 
-        public static List<Item> EquippedItems(Body body)
+        public List<Item> EquippedItems()
         // Metodo que busca que items tiene equipado el personaje y los agrega a una lista
         {
             List<Item> equippedItems = new List<Item> { };
-            if (body.Head != null)
+            if (this.Head != null)
             {
-                equippedItems.Add(body.Head);
+                equippedItems.Add(this.Head);
             }
-            if (body.Chest != null)
+            if (this.Chest != null)
             {
-                equippedItems.Add(body.Chest);
+                equippedItems.Add(this.Chest);
             }
-            if (body.MainWeapon != null)
+            if (this.PrimaryWeapon != null)
             {
-                equippedItems.Add(body.MainWeapon);
+                equippedItems.Add(this.PrimaryWeapon);
             }
-            if (body.SecondaryWeapon != null)
+            if (this.SecondaryWeapon != null)
             {
-                equippedItems.Add(body.SecondaryWeapon);
+                equippedItems.Add(this.SecondaryWeapon);
             }
-            if (body.Legs != null)
+            if (this.Legs != null)
             {
-                equippedItems.Add(body.Legs);
+                equippedItems.Add(this.Legs);
             }
-            if (body.Feet != null)
+            if (this.Feet != null)
             {
-                equippedItems.Add(body.Feet);
+                equippedItems.Add(this.Feet);
             }
             return equippedItems;
         }
