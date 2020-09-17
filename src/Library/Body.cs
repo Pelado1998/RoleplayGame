@@ -13,6 +13,7 @@ namespace Program
         public Item Legs { get; set; }
         public Item Feet { get; set; }
 
+        public Body(){}
         public Body(List<Item> items)
         {
             foreach (Item item in items)
