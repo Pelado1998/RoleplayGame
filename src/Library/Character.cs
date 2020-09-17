@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Program
 {
-    class Character
+    public class Character
     {
         private String Name {get;}
         private TypeCharacter Type {get;}
@@ -12,9 +12,30 @@ namespace Program
         public Character(String name,String type, List<Item> inventory)
         {
             this.Name = name;
-            this.Type = TypeCharacter.StatSelector(type);
+            this.Type = new TypeCharacter(type);
             this.Life = Type.MaxLife;
-            this.Inventory = inventory;
+            bool condition = true;
+            
+            foreach (Item item in inventory)
+            {
+                condition &= (item.Type == this.Type);
+            }
+            if (condition)
+            {
+                this.Inventory = inventory;
+            }
+            else
+            {
+                this.Inventory = new List<Item>{}; 
+            }
+            
+        }
+        public Character(String name,String type)
+        {
+            this.Name = name;
+            this.Type = new TypeCharacter(type);
+            this.Life = Type.MaxLife;
+            this.Inventory = new List<Item>{};
         }
         
         public void Heal ()
@@ -23,7 +44,14 @@ namespace Program
         }
         public void RecieveAttack(int attack)
         {
-            this.Life = this.Life - attack;
+            if (this.Life <= attack)
+            {
+                this.Life =0;
+            }
+            else
+            {
+                this.Life = this.Life - attack;
+            }
         }
         public int AttackCalculator()
         {
@@ -42,6 +70,14 @@ namespace Program
                 res+=item.Defense+item.Resistence;
             }
             return res;
+        }
+        public void AddItem(Item item)
+        {
+            this.Inventory.Add(item);
+        }
+        public void RemoveItem(Item item)
+        {
+            this.Inventory.Remove(item);
         }
 
     }
