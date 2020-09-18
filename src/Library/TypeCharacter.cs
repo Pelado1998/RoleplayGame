@@ -4,12 +4,14 @@ namespace Program
 {
     public class TypeCharacter
     {
+        #region Campos de clase
         public String Name { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
         public int Magia { get; set; }
         public int MaxLife { get; set; }
-
+        #endregion
+        #region Constructor
         public TypeCharacter(String type)
         {
             switch (type.ToLower())
@@ -48,5 +50,6 @@ namespace Program
 
             }
         }
+        #endregion
     }
 }

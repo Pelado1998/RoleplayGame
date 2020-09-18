@@ -6,11 +6,11 @@ namespace Program
     public class Character
     {
         #region Campos de clase
-        private String Name { get; }
-        private TypeCharacter Type { get; }
-        private int Life { get; set; }
-        public Body Body { get; }
-        private Inventory Inventory { get; }
+        public String Name { get;set; }
+        public TypeCharacter Type { get;set; }
+        public int Life { get; set; }
+        public Body Body { get; set;}
+        public Inventory Inventory { get;set; }
         #endregion
         
         #region  Constructores
