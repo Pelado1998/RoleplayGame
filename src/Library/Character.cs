@@ -9,13 +9,28 @@ namespace Program
         private TypeCharacter Type { get; }
         private int Life { get; set; }
         public Body Body { get; }
-        private List<Item> Inventory { get; }
+        private Inventory Inventory { get; }
+        
+        public Character(String name, String type, List<Item> inventory,Body body)
+        {
+            this.Name = name;
+            this.Type = new TypeCharacter(type);
+            this.Life = Type.MaxLife;
+            this.Body = body;
+        }
+        public Character(String name, String type, List<Item> inventory,List<Item> bodyList)
+        {
+            this.Name = name;
+            this.Type = new TypeCharacter(type);
+            this.Life = Type.MaxLife;
+            this.Body = new Body(bodyList);
+        }
         public Character(String name, String type, List<Item> inventory)
         {
             this.Name = name;
             this.Type = new TypeCharacter(type);
             this.Life = Type.MaxLife;
-            this.Body = new Body(inventory);
+            this.Inventory = new Inventory(inventory);
         }
         public Character(String name, String type)
         {
@@ -194,12 +209,11 @@ namespace Program
         }
         public void AddItem(Item item)
         {
-            this.Inventory.Add(item);
+            this.Inventory.AddItem(item);
         }
         public void RemoveItem(Item item)
         {
-            this.Inventory.Remove(item);
+            this.Inventory.RemoveItem(item);
         }
-
     }
 }

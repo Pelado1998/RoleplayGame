@@ -7,13 +7,19 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            // Crear item (String name, String characterType, String type, int attack, int defense, int force, int resistence, int magic)
-            // Item.type -> head, chest, mainWeapon, secondaryWeapon, pants, feet
-            // Crear personaje (String name, String type, List<Item> inventory) || (String name, String type)
-            Item item1 = new Item("Espada1", "mago", "mainWeapon", 15, 15, 2, 20, 5);
-            Item item2 = new Item("Arco1", "mago", "mainWeapon", 15, 15, 2, 20, 5);
-            Item item3 = new Item("Gorro1", "mago", "head", 15, 15, 2, 20, 5);
-            Item item4 = new Item("Casco1", "mago", "head", 15, 15, 2, 20, 5);
+           //Head, Chest PrimaryWeapon  SecondaryWeapon Legs  Feet
+
+            Item Head1 = new Item("Casco1", "mago", "head", 15, 15, 2, 20, 5);
+            Item Chest1 = new Item("Armadura1", "mago", "chest", 15, 15, 2, 20, 5);
+            Item Primary1 = new Item("Espada1", "mago", "PrimaryWeapon", 15, 15, 2, 20, 5);
+            Item Secundary1 = new Item("Arco1", "mago", "SecundaryWeapon", 15, 15, 2, 20, 5);
+            Item Legs1 = new Item("Pantalones1", "mago", "legs", 15, 15, 2, 20, 5);
+            Item Feet1 = new Item("Botas1", "mago", "feet", 15, 15, 2, 20, 5);
+
+            
+
+
+
 
             Item item5 = new Item("Espada2", "elfo", "mainWeapon", 15, 15, 2, 20, 5);
             Item item6 = new Item("Arco2", "elfo", "mainWeapon", 15, 15, 2, 20, 5);
