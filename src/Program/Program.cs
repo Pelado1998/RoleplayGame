@@ -7,7 +7,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
-           //Head, Chest PrimaryWeapon  SecondaryWeapon Legs  Feet
+           //Creación de items
 
             Item Head1 = new Item("Casco1", "mago", "head", 15, 15, 2, 20, 5);
             Item Chest1 = new Item("Armadura1", "mago", "chest", 15, 15, 2, 20, 5);
@@ -16,8 +16,11 @@ namespace Program
             Item Legs1 = new Item("Pantalones1", "mago", "legs", 15, 15, 2, 20, 5);
             Item Feet1 = new Item("Botas1", "mago", "feet", 15, 15, 2, 20, 5);
 
+            //Creación de inventario
+            Inventory Inventario = new Inventory(new List<Item>{Head1,Chest1,Primary1,Secundary1,Legs1,Feet1});
             
-
+            //Creación de personaje
+            Character MagoLoco = new Character("Mago Loco 🧙🏻‍♂️","mago",)
 
 
 

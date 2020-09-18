@@ -6,14 +6,15 @@ namespace Program
     // Clase que contendra todos los items equipados del personaje
     public class Body
     {
+        #region Campos de clase
         public Item Head { get; set; }
         public Item Chest { get; set; }
         public Item PrimaryWeapon { get; set; }
         public Item SecondaryWeapon { get; set; }
         public Item Legs { get; set; }
         public Item Feet { get; set; }
-
-        public Body(){}
+        #endregion
+        #region Constructores
         public Body(List<Item> items)
         {
             foreach (Item item in items)
@@ -41,7 +42,8 @@ namespace Program
                 }
             }
         }
-
+        #endregion
+        #region Metodos
         public List<Item> EquippedItems()
         // Metodo que busca que items tiene equipado el personaje y los agrega a una lista
         {
@@ -72,5 +74,6 @@ namespace Program
             }
             return equippedItems;
         }
+        #endregion
     }
 }

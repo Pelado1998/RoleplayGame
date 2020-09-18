@@ -5,41 +5,71 @@ namespace Program
 {
     public class Character
     {
+        #region Campos de clase
         private String Name { get; }
         private TypeCharacter Type { get; }
         private int Life { get; set; }
         public Body Body { get; }
         private Inventory Inventory { get; }
+        #endregion
         
-        public Character(String name, String type, List<Item> inventory,Body body)
+        #region  Constructores
+        public Character(String name, String type, Inventory inventory,Body body)
+        {
+            this.Name = name;
+            this.Type = new TypeCharacter(type);
+            this.Life = Type.MaxLife;
+            this.Body = body;
+            this.Inventory = inventory;
+        }
+        public Character(String name, String type,Body body)
         {
             this.Name = name;
             this.Type = new TypeCharacter(type);
             this.Life = Type.MaxLife;
             this.Body = body;
         }
-        public Character(String name, String type, List<Item> inventory,List<Item> bodyList)
+        public Character(String name, String type, Inventory inventory)
         {
             this.Name = name;
             this.Type = new TypeCharacter(type);
             this.Life = Type.MaxLife;
+            this.Inventory = inventory;
+        }
+
+        public Character(String name, String type, List<Item> body)
+        {
+            this.Name = name;
+            this.Type = new TypeCharacter(type);
+            this.Life = Type.MaxLife;
+            this.Body = new Body(body);
+        }
+        public Character(String name, String type, Inventory inventory,List<Item> bodyList)
+        {
+            this.Name = name;
+            this.Type = new TypeCharacter(type);
+            this.Life = Type.MaxLife;
+            this.Inventory = inventory;
             this.Body = new Body(bodyList);
         }
-        public Character(String name, String type, List<Item> inventory)
+        public Character(String name, String type, List<Item> inventory,Body body)
         {
             this.Name = name;
             this.Type = new TypeCharacter(type);
             this.Life = Type.MaxLife;
             this.Inventory = new Inventory(inventory);
+            this.Body = body;
         }
+        
         public Character(String name, String type)
         {
             this.Name = name;
             this.Type = new TypeCharacter(type);
             this.Life = Type.MaxLife;
-            this.Body = new Body(new List<Item> { });
         }
-
+        #endregion
+        
+        #region Metodos
         public void Heal()
         // Cura al personaje al 100% de la vida
         {
@@ -215,5 +245,6 @@ namespace Program
         {
             this.Inventory.RemoveItem(item);
         }
+    #endregion
     }
 }

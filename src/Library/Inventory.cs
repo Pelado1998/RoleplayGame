@@ -6,12 +6,16 @@ namespace Program
     // Clase que contendra todos los items equipados del personaje
     public class Inventory
     {
+        #region Campo de clase
         List<Item> InventoryItems {get;set;}
+        #endregion
+        #region Constructor
         public Inventory(List<Item> inventory)
         {
             this.InventoryItems=inventory;
         }
-
+        #endregion
+        #region Metodos
         public void AddItem(Item item)
         {
             this.InventoryItems.Add(item);
@@ -29,6 +33,7 @@ namespace Program
             }
             return res;
         }
+        #endregion
     }
   
 }
