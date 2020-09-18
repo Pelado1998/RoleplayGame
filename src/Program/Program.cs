@@ -43,7 +43,7 @@ namespace Program
             Item item12 = new Item("Casco3", "enano", "head", 15, 15, 2, 20, 5);
 
             Character chr1 = new Character("Juan", "mago");
-            Character chr2 = new Character("Pedro", "mago", new List<Item> { item1, item2, item3, item4 });
+            //Character chr2 = new Character("Pedro", "mago", new List<Item> { item1, item2, item3, item4 });
             Character chr3 = new Character("Sebastian", "elfo", new List<Item> { item5, item6, item7, item8 });
             //System.Console.WriteLine(chr2.Life);  
             //chr2.RecieveAttack(chr3.AttackCalculator());
