@@ -69,6 +69,28 @@ namespace Program
 
             Character gimli = new Character("Gimli", "enano", itemList2);
             // --------------------------> Cristian <--------------------------
+
+
+            //---------------------------> Estefano <--------------------------
+            Item head2 = new Item("Casco2", "mago", "head", 10, 15, 2, 20, 5);
+            Item secundary2 = new Item("Arco2", "mago", "SecundaryWeapon", 20, 15, 2, 20, 5);
+            Item chest2 = new Item("Armadura2", "mago", "chest", 15, 10, 2, 20, 5);
+            Item legs2 = new Item("Pantalones2", "mago", "legs", 15, 15, 2, 15, 5);
+            Item feet2 = new Item("Botas2", "mago", "feet", 15, 15, 2, 20, 5);
+            Item primary2 = new Item("Espada2", "mago", "PrimaryWeapon", 15, 15, 2, 20, 5);
+            //Inventory
+            Inventory inventarioMago2 = new Inventory(new List<Item>{head2,chest2,primary2,secundary2,legs2,feet2});
+            
+            //Character
+            Character MagoDFuego = new Character("MagoDFuego","mago",inventarioMago2,new Body());
+            MagoDFuego.EquipItem(head2);
+            MagoDFuego.EquipItem(chest2);
+            MagoDFuego.EquipItem(legs2);
+            MagoDFuego.EquipItem(feet2);
+            MagoDFuego.EquipItem(primary2);
+            MagoDFuego.EquipItem(secundary2);
+            
         }
+        //---------------------------------------> <------------------------------------------------
     }
 }
