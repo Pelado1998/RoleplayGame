@@ -42,6 +42,10 @@ namespace Program
                 }
             }
         }
+        public Body()
+        {
+            //Body vacio
+        }
         #endregion
         #region Metodos
         public List<Item> EquippedItems()

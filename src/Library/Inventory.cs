@@ -14,6 +14,10 @@ namespace Program
         {
             this.InventoryItems=inventory;
         }
+        public Inventory()
+        {
+            this.InventoryItems= new List<Item>{};
+        }
         #endregion
         #region Metodos
         public void AddItem(Item item)
