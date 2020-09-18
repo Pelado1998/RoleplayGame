@@ -83,12 +83,13 @@ namespace Program
             
             //Character
             Character MagoDFuego = new Character("MagoDFuego","mago",inventarioMago2,new Body());
-            MagoLoco.EquipItem(head2);
-            MagoLoco.EquipItem(chest2);
-            MagoLoco.EquipItem(primary2);
-            MagoLoco.EquipItem(secundary2);
-            MagoLoco.EquipItem(legs2);
-            MagoLoco.EquipItem(feet2);
+            MagoDFuego.EquipItem(head2);
+            MagoDFuego.EquipItem(chest2);
+            MagoDFuego.EquipItem(legs2);
+            MagoDFuego.EquipItem(feet2);
+            MagoDFuego.EquipItem(primary2);
+            MagoDFuego.EquipItem(secundary2);
+            
         }
         //---------------------------------------> <------------------------------------------------
     }
