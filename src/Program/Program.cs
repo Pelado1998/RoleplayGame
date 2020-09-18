@@ -7,13 +7,30 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            // Crear item (String name, String characterType, String type, int attack, int defense, int force, int resistence, int magic)
-            // Item.type -> head, chest, mainWeapon, secondaryWeapon, pants, feet
-            // Crear personaje (String name, String type, List<Item> inventory) || (String name, String type)
-            Item item1 = new Item("Espada1", "mago", "mainWeapon", 15, 15, 2, 20, 5);
-            Item item2 = new Item("Arco1", "mago", "mainWeapon", 15, 15, 2, 20, 5);
-            Item item3 = new Item("Gorro1", "mago", "head", 15, 15, 2, 20, 5);
-            Item item4 = new Item("Casco1", "mago", "head", 15, 15, 2, 20, 5);
+            #region Personaje Rafael
+           //Creación de items
+            Item head1 = new Item("Casco1", "mago", "head", 15, 15, 2, 20, 5);
+            Item chest1 = new Item("Armadura1", "mago", "chest", 15, 15, 2, 20, 5);
+            Item primary1 = new Item("Espada1", "mago", "PrimaryWeapon", 15, 15, 2, 20, 5);
+            Item secundary1 = new Item("Arco1", "mago", "SecundaryWeapon", 15, 15, 2, 20, 5);
+            Item legs1 = new Item("Pantalones1", "mago", "legs", 15, 15, 2, 20, 5);
+            Item feet1 = new Item("Botas1", "mago", "feet", 15, 15, 2, 20, 5);
+
+            //Creación de inventario
+            Inventory inventario = new Inventory(new List<Item>{head1,chest1,primary1,secundary1,legs1,feet1});
+            
+            //Creación de personaje
+            Character MagoLoco = new Character("Mago Loco 🧙🏻‍♂️","mago",inventario,new Body());
+            MagoLoco.EquipItem(head1);
+            MagoLoco.EquipItem(chest1);
+            MagoLoco.EquipItem(primary1);
+            MagoLoco.EquipItem(secundary1);
+            MagoLoco.EquipItem(legs1);
+            MagoLoco.EquipItem(feet1);
+            #endregion
+
+
+
 
             Item item5 = new Item("Espada2", "elfo", "mainWeapon", 15, 15, 2, 20, 5);
             Item item6 = new Item("Arco2", "elfo", "mainWeapon", 15, 15, 2, 20, 5);
@@ -26,7 +43,7 @@ namespace Program
             Item item12 = new Item("Casco3", "enano", "head", 15, 15, 2, 20, 5);
 
             Character chr1 = new Character("Juan", "mago");
-            Character chr2 = new Character("Pedro", "mago", new List<Item> { item1, item2, item3, item4 });
+            //Character chr2 = new Character("Pedro", "mago", new List<Item> { item1, item2, item3, item4 });
             Character chr3 = new Character("Sebastian", "elfo", new List<Item> { item5, item6, item7, item8 });
             //System.Console.WriteLine(chr2.Life);  
             //chr2.RecieveAttack(chr3.AttackCalculator());

@@ -4,6 +4,7 @@ namespace Program
 {
     public class Item
     {
+        #region Campos de Clase
         public String Name { get; set; }
         public TypeCharacter CharacterType { get; set; }
         public String Type { get; set; }
@@ -12,9 +13,9 @@ namespace Program
         public String Description { get; set; }
         public int Force { get; set; }
         public int Resistence { get; set; }
-
         public int Magic { get; set; }
-
+        #endregion
+        #region Constructores
         public Item(String name, String characterType, String type, int attack, int defense, int force, int resistence, int magic)
         {
             this.Name = name;
@@ -40,5 +41,6 @@ namespace Program
             this.Magic = Magic;
             this.Description = description;
         }
+        #endregion
     }
 }
